@@ -35,12 +35,13 @@ class Solution:
         :type k: int
         :rtype: None Do not return anything, modify nums in-place instead.
         """
-        return nums
+        idx = len(nums) - k
+        return  nums[idx:] + nums[:idx]
 
-n1 = [1,2,3,4,5,6,7]
-n2 = [-1,-100,3,99]
+n1 = [1, 2, 3, 4, 5, 6, 7]
+n2 = [-1, -100, 3, 99]
 
 S1 = Solution()
 
-print(S1.rotate(n1, 3))
-print(S1.rotate(n2, 2))
+print(S1.rotate(n1, 3)) # [5, 6, 7, 1, 2, 3, 4]
+print(S1.rotate(n2, 2)) # [3, 99, -1, -100]
