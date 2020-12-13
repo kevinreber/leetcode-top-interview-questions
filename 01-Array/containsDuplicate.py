@@ -22,7 +22,12 @@ class Solution:
         :type nums: List[int]
         :rtype: bool
         """
-        return nums
+        # sort nums
+        nums.sort()
+        for i in range(len(nums) - 1):
+            if nums[i + 1] == nums[i]:
+                return True
+        return False
 
 n1 = [1,2,3,1]
 n2 = [1,2,3,4]
