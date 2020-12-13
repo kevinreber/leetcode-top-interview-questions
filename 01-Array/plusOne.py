@@ -29,6 +29,22 @@ class Solution(object):
         :type digits: List[int]
         :rtype: List[int]
         """
+        # digits str
+        digits = [str(num) for num in digits]
+
+        # join nums together and convert to integer
+        digits = ''.join(digits)
+        nums = int(digits)
+
+        # add one
+        nums += 1
+
+        # convert to string
+        nums = str(nums)
+
+        # split each character and convert back to integer
+        digits = [int(num) for num in nums]
+
         return digits
 
 n1 = [1,2,3]
